@@ -1,0 +1,52 @@
+<html>
+    <head><title>this keyword</title></head>
+    <body>
+        <h1>JS this keyword</h1>
+
+        <script>
+            // var value=60;
+            // function myFunction(){
+            //     var value=100;
+            //     alert("value:"+ value);
+            //     alert("this value is :"+this.value);
+            // }
+            // myFunction()
+
+
+            //IN OBJECT
+                // var random={
+                //     name:"ANUSHA",
+                //     info(){      //method
+                //         console.log("MY NAME IS "+this.name)
+                //     }
+                // }
+                // random.info()   //call method
+
+            const random={
+                name:"Tutorial ",
+                video:["js","python","database"],
+                info(){
+                    this.video.forEach(function(tag){
+                        console.log(tag)
+                    })
+                }
+
+            }
+            random.info()
+
+
+            // const random={
+            //     name:"Tutorial ",
+            //     video:["js","python","database"],
+            //     info(){
+            //         this.video.forEach(function(tag){
+            //             console.log(this.name,tag)
+            //         },this)    //this will referenced the current object
+            //     }
+
+            // }
+            // random.info()
+        </script>
+
+    </body>
+</html>

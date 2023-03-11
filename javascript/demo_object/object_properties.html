@@ -1,0 +1,23 @@
+<htm>
+    <head><title>javascript objects</title></head>
+    <body>
+        <h1>Creating js object</h1>
+        <p id="demo"></p>
+
+     <script>
+        //using object literal
+        var student={
+            name:"Anusha",
+            age:24,
+            studies:"Computer Engineering",
+        };
+        student.name="Prabha";  // updating student properties
+        document.getElementById("demo").innerHTML=student.name + ' of the age ' +student.age+ " studies " +student.studies;
+
+        //x=student.age;    updating by using variable
+        //document.getElementById("demo").innerHTML=student.name + ' of the age ' +x+ " studies " +student.studies;
+
+        //x="age";
+        //document.getElementById("demo").innerHTML=student.name + ' of the age ' +student[x]+ " studies " +student.studies;
+
+     </script>

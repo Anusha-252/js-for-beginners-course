@@ -1,0 +1,79 @@
+<html>
+    <head><title>JavaScript Functions</title></head>
+    <body>
+        <h1>Functions in Js</h1>
+        <p id="demo"></p>
+    </body>
+
+    <script>
+        //simply function
+        function myFunction(val){
+            return val*val*val;
+        };
+        document.getElementById("demo").innerHTML=myFunction(5);
+    </script>
+
+    <script>
+         //simply function another method
+        function myFunction(val){
+            document.getElementById("demo").innerHTML=val+val;
+        };
+        myFunction(5);
+    </script>
+
+    <script>
+        //Function expression
+        var x=function(a,b){
+            return a*b;
+        };
+        document.getElementById("demo").innerHTML=x(2,9);
+
+    </script>
+
+    <script>
+        //Function Constructor
+        var myFunction= new Function("a","b", "return a+b" );
+        document.getElementById("demo").innerHTML=myFunction(2,9);
+        x=myFunction(5,6);
+        document.getElementById("demo").innerHTML=x;
+    </script>
+    <script>
+        //self-invoking functions
+        // (function(){
+        //     alert("I will invoke myself");
+        // })();
+    </script>
+
+    <script>
+        //functions as value
+        // function product(a,b){
+        //     return a*b;
+        // };
+        // y=product(4,8);
+        // document.getElementById("demo").innerHTML="The required product is" + y;
+    </script>
+
+    <script>
+        //arrow function
+        const myFunct=(a,b,c)=>{ return a*b*c }
+        let product=myFunct(2,5,8);
+        document.getElementById("demo").innerHTML="The required product is " + product;
+    </script>
+
+    <script>
+        //generator function
+        function* generateFunc(){
+            yield 1;
+            yield 2;
+            return 3;
+        }
+        let generator =generateFunc();
+        let one=generator.next();
+        let two=generator.next();
+        let three=generator.next();
+        alert(JSON.stringify(one));
+        alert(JSON.stringify(two));
+        alert(JSON.stringify(three));
+    </script>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head><title>javascript objects</title></head>
+    <body>
+        <h1>Creating js object</h1>
+        <p id="demo"></p>
+
+     <script>
+        //using object literal
+        var student={
+            name:"Anusha",
+            age:24,
+            studies:"Computer Engineering",
+        };
+        document.getElementById("demo").innerHTML=student.name + ' of the age ' +student.age+ " studies " +student.studies;
+     </script>
+
+     <script>
+        //using new keyword
+        var student= new Object();
+        student.name="Anusha",
+        student.age=24,
+        student.studies="computer engineering";
+        document.getElementById("demo").innerHTML=student.name + ' of the age ' +student.age+ " studies " +student.studies;
+     </script>
+
+     <script>
+         //using objectconstructor to create and define js object
+         function stud(name,age,studies){
+            this.firstName= name;
+            this.age=age;
+            this.studies=studies;
+        }
+        var student= stud("Anusha",24,"Comp Eng");
+        document.getElementById("demo").innerHTML=student.name + ' of the age ' +student.age+ " studies " +student.studies;
+     </script>
+        
+
+    
+        
+
+
+    
+
+    </body>
+</html>

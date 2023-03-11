@@ -1,0 +1,36 @@
+<html>
+    <head><title>javascript objects</title></head>
+    <body>
+        <h1>Creating js object</h1>
+        <p id="demo"></p>
+
+     <script>
+       var car ={
+        model: "BMW 3289",
+        color:"navy blue",
+        fuel_type:"diesel",
+        get fuel(){                     //get  will access  the properties of object car.
+            return this.fuel_type.toUpperCase();
+        }
+       };
+       document.getElementById("demo").innerHTML=car.fuel;
+
+     </script>
+
+     <script>
+       //setter
+        var car={
+          model: "BMW 4553",
+          color:"dark blue",
+          fuel_type:"",
+          set fuel(fuel){
+            this.fuel_type =fuel;   //yo chainxa
+          }
+        };
+        car.fuel="petrol";
+        document.getElementById("demo").innerHTML=car.fuel_type;
+
+     </script>
+    
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+    <head> Js array </head>
+        <body>
+            <p id="demo"></p>
+        </body>
+        <script>
+            let cars=["bmw","volvo", "honda"];
+            document.getElementById("demo").innerHTML =cars;
+
+            let bmw=cars[0];
+            document.getElementById("demo").innerHTML=bmw;
+
+            let len=cars.length;
+            document.getElementById("demo").innerHTML=len;
+
+            let last_array_item = cars[cars.length-1];
+            document.getElementById("demo").innerHTML=last_array_item;
+
+            cars.forEach((item,index,array)=>{
+                console.log(item,index)
+            });
+
+            //tostring()
+            document.getElementById("demo").innerHTML=cars.toString();
+
+            //pop()
+            let pop_last_element = cars.pop()
+            document.getElementById("demo").innerHTML=pop_last_element;
+            let pop_last_element1 =cars[cars.length-1];
+            console.log(pop_last_element1);
+
+            //push()
+            cars.push("audi");
+            document.getElementById("demo").innerHTML=cars;
+
+            //shift()
+            cars.shift();
+            document.getElementById("demo").innerHTML=cars;
+
+            //unshift()
+            cars.unshift("hyundai");
+            document.getElementById("demo").innerHTML=cars;
+
+            //concat()
+            let fruits=["apple","orange","litchi"];
+            let vegetables=["cauli","pumpkin","cabbage"];
+            document.getElementById("demo").innerHTML=fruits.concat(vegetables);
+
+            let bikes=["shine","ryder","duke"];
+            let vehicles=bikes.concat(cars);
+            document.getElementById("demo").innerHTML=vehicles;
+            document.getElementById("demo").innerHTML=cars;
+           
+            //sort()
+            cars.sort()
+            document.getElementById("demo").innerHTML=cars;
+            vehicles.sort()
+            document.getElementById("demo").innerHTML=vehicles;
+
+            //reverse()
+            vehicles.reverse()
+            document.getElementById("demo").innerHTML=vehicles;
+
+            //Array.map()
+            let num1=[1,2,3,4];
+            let num2=num1.map(multiply);
+            function multiply(value){
+                return value *2;
+            }
+            document.getElementById("demo").innerHTML=num2;
+             
+            let num3=[1,2,3,4];
+            let num4=num1.map(sum);
+            function sum(value){
+                return value +2;
+            }
+            document.getElementById("demo").innerHTML=num4;
+
+            //filter()
+            let num5=num4.filter(compare);
+            function compare(value){
+                return value>4;
+            }
+            document.getElementById("demo").innerHTML=num5;
+
+            let num6=[2,4,14,5,24,1,9,6];
+            let num7=num6.filter(compare);
+            function compare(value){
+                return value>6;
+            }
+            document.getElementById("demo").innerHTML=num7;
+
+            //reduce() array  to one value
+            let num8=num7.reduce(sum);
+            function sum(total,value){
+                return total*value;
+            }
+            document.getElementById("demo").innerHTML=num8;
+
+        </script>
+</html>
