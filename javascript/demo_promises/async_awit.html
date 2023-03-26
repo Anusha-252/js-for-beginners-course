@@ -2,6 +2,7 @@
     <head><title>promises</title> </head>
     <body>
         <h1>Async await in javascript</h1>
+        <p id="demo"></p>
 
         <script>
             //nested promises
@@ -44,6 +45,19 @@
             }
             calculateResult()
         </script>
+        <script>
+            function myDisplayer(some) {
+              document.getElementById("demo").innerHTML = some;
+            }
+            
+            async function myFunction() {return "Hello";}
+            
+            myFunction().then(
+              function(value) {myDisplayer(value);},
+              function(error) {myDisplayer(error);}
+            );
+        </script>
+
 
     </body>
 </html>
